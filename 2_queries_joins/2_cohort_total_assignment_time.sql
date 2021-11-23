@@ -1,18 +1,5 @@
 SELECT
-  students.name,
-  cohorts.name,
-  assignment_submissions.duration
-FROM students
-JOIN cohorts
-  ON students.cohort_id = cohorts.id
-JOIN assignment_submissions
-  ON students.id = assignment_submissions.student_id
-WHERE cohorts.name LIKE 'FEB12';
-
-
-
-SELECT
-  SUM(assignment_submissions.duration)
+  SUM(assignment_submissions.duration) as total_duration
 FROM students
 JOIN cohorts
   ON students.cohort_id = cohorts.id
@@ -23,15 +10,24 @@ WHERE cohorts.name LIKE 'FEB12';
 
 
 
+-- SELECT
+--   students.name,
+--   cohorts.name,
+--   assignment_submissions.duration
+-- FROM students
+-- JOIN cohorts
+--   ON students.cohort_id = cohorts.id
+-- JOIN assignment_submissions
+--   ON students.id = assignment_submissions.student_id
+-- WHERE cohorts.name LIKE 'FEB12';
 
 
 
 
-
-SELECT SUM(assignment_submissions.duration)
-FROM cohorts 
-JOIN assignment_submissions ON cohorts.id = assignment_submissions.student_id
-WHERE students.name LIKE 'Ibrahim Schimmel';
+-- SELECT SUM(assignment_submissions.duration)
+-- FROM cohorts 
+-- JOIN assignment_submissions ON cohorts.id = assignment_submissions.student_id
+-- WHERE students.name LIKE 'Ibrahim Schimmel';
 
 
 
