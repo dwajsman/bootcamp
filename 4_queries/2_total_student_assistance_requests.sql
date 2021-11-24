@@ -1,12 +1,12 @@
-SELECT COUNT(teachers.id) as total_assistances, 
-teachers.name as name
+SELECT COUNT(student.id) as total_assistances, 
+students.name as name
 	FROM assistance_requests
-	JOIN teachers ON teachers.id = teacher_id
-	WHERE teachers.name = 'Waylon Boehm'
-	GROUP BY teachers.name; 
+	JOIN students ON students.id = student_id
+	WHERE students.name = 'Elliot Dickinson'
+	GROUP BY students.name; 
 
 
--- SELECT * FROM teachers;
+-- SELECT * FROM students;
 -- SELECT COUNT(id) FROM assistance_requests
 -- WHERE teacher_id = 4;
 

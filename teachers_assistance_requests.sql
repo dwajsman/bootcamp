@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS teacher(
+CREATE TABLE IF NOT EXISTS teachers(
     id SERIAL PRIMARY KEY NOT NULL,
     name VARCHAR(255) NOT NULL,
     start_date DATE,
@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS teacher(
 );
 
 
-CREATE TABLE IF NOT EXISTS assistance_request(
+CREATE TABLE IF NOT EXISTS assistance_requests(
     id SERIAL PRIMARY KEY NOT NULL,
     assignment_id INTEGER REFERENCES assignments(id) ON DELETE CASCADE,
     student_id INTEGER REFERENCES students(id) ON DELETE CASCADE,
